@@ -1,0 +1,79 @@
+.nav-item button{
+    margin: 3px;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #198754;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #198754;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+}
+.nav-item button:hover{
+    background-color: #198754;
+    color: white;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.title{
+    width: 50%;
+    margin-top: 6%;
+    margin-left: 25%;
+}
+.title input{
+    color: #198754;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 14px;
+    margin-bottom: 8px;
+    border: none;
+    border-bottom: 2px solid #198754;
+    outline: none;
+    box-shadow: 0 0 10px 4px rgb(31 66 135 / 10%);
+    height: 45px;
+    border-radius: 1.5rem!important;
+}
+.title input:focus{
+    border-color: red;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.title input::placeholder{
+    color: #198754;
+}
+textarea{
+    color: #198754;
+    width: 71%;
+    padding-top: 10px;
+    padding-left: 14px;
+    border: none;
+    border-bottom: 2px solid #198754;
+    outline: none;
+    box-shadow: 0 0 10px 4px rgb(31 66 135 / 10%);
+    height: 150px;
+    border-radius: 1.5rem!important;
+}
+textarea::placeholder{
+    color: #198754;
+}
+textarea:focus{
+    border-color: red;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;   
+}
+#butns{
+    margin-left: 4px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1rem;
+}
+.tbl{
+    padding-top:20px;
+}

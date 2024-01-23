@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Update{% endblock title %}
+{% block body %}
+<form class="title"  action = "/update/{{user.sno}}" method="POST">
+    <input type="text" id="fname"  name="fname" value = "{{user.fname}}" placeholder="First name">
+    <input type="text"id="lname"  name="lname" value = "{{user.lname}}" placeholder="Last Name">
+    <div id="butns">
+      <button class="btn btn-outline-success" type="submit">Update</button>
+    </div>
+</form>
+{% endblock body %}

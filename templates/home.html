@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+    <form class="title"  action = "/" method="POST">
+        <input type="text" id="fname"  name="fname" placeholder="First name">
+        <input type="text"id="lname"  name="lname" placeholder="Last Name">
+        <div id="butns">
+          <button class="btn btn-outline-success" type="submit">Add</button>
+        </div>
+    </form>
+    <div class="container">
+      <div class="tbl" >
+      {% if allusers | length == 0 %}
+      <div class="alert alert-dark" role="alert">
+        No User Found, Please Add new User
+      </div>
+      {% else %}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Time</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for user in allusers %}
+              <tr>
+              <th scope="row">{{loop.index}}</th>
+              <td>{{user.fname}}</td>
+              <td>{{user.lname}}</td>
+              <td>{{user.time_created}}</td>
+              <td>
+                <a href="/delete/{{user.sno}}"  type="button" class="btn btn-outline-danger mx-1">Delete</button>
+                <a href="/update/{{user.sno}}"  type="button" class="btn btn-outline-success mx-1">Update</button>
+              </td>
+
+              </tr>
+              {% endfor %}
+          </tbody>
+          </table>
+              {% endif %}
+      </div>
+    </div>
+{% endblock body %}
